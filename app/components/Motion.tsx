@@ -48,7 +48,11 @@ export function Reveal({
   );
 }
 
-/** Counts a stat up from zero when it scrolls into view. */
+/**
+ * Counts a stat up from zero when it scrolls into view.
+ * Renders the final value on the server so the real number shows even
+ * before JavaScript loads (no "0" flash for crawlers or slow connections).
+ */
 export function CountUp({
   value,
   suffix = "",
@@ -61,7 +65,7 @@ export function CountUp({
   duration?: number;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
-  const [display, setDisplay] = useState(0);
+  const [display, setDisplay] = useState(value);
   const started = useRef(false);
 
   useEffect(() => {
@@ -69,7 +73,6 @@ export function CountUp({
     if (!node) return;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setDisplay(value);
       return;
     }
 

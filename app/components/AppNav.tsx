@@ -8,10 +8,10 @@ import { signOut } from "@/lib/useAuthUser";
 
 const LINKS = [
   { href: "/", label: "Home" },
-  { href: "/templates", label: "Templates" },
-  { href: "/features", label: "Features" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/blog", label: "Blog" },
+  { href: "/#features", label: "Features" },
+  { href: "/#templates", label: "Templates" },
+  { href: "/#pricing", label: "Pricing" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export default function AppNav({

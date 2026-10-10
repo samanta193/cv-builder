@@ -13,31 +13,31 @@ const features = [
     icon: "◉",
     title: "You stay in control",
     description:
-      "Every AI suggestion is shown first. Accept it, edit it, or reject it — nothing changes until you say so.",
+      "Every AI suggestion is shown first. Accept it, edit it, or reject it. Nothing changes until you say so.",
   },
   {
     icon: "▤",
-    title: "Live resume preview",
+    title: "Live CV preview",
     description:
-      "See your resume update instantly as you type, exactly as it will look when you download it.",
+      "See your CV update instantly as you type, exactly as it will look when you download it.",
   },
   {
     icon: "▣",
     title: "Real, ATS-friendly templates",
     description:
-      "Four professionally designed templates — Modern, Professional, ATS and Executive — built for real job applications.",
+      "Four professionally designed templates: Modern, Professional, ATS and Executive — built for real job applications.",
   },
   {
     icon: "✓",
-    title: "AI resume review",
+    title: "AI CV review",
     description:
-      "Get a full review of your finished resume: clarity, ATS-readiness, weak wording, repetition and missing information.",
+      "Get a full review of your finished CV: clarity, ATS-readiness, weak wording, repetition and missing information.",
   },
   {
     icon: "⇄",
     title: "Job description matcher",
     description:
-      "Paste a job post and see where your resume already matches, which wording to align, and any honest gaps.",
+      "Paste a job post and see where your CV already matches, which wording to align, and any honest gaps.",
   },
 ];
 
@@ -50,7 +50,7 @@ const steps = [
   },
   {
     number: "02",
-    title: "Let AI improve your resume",
+    title: "Let AI improve your CV",
     description:
       "Get smart suggestions to make your content clearer, stronger and more professional.",
   },
@@ -58,7 +58,7 @@ const steps = [
     number: "03",
     title: "Download & apply",
     description:
-      "Choose your favorite template, preview your resume and download it when you're ready.",
+      "Choose your favorite template, preview your CV and download it when you're ready.",
   },
 ];
 
@@ -83,34 +83,34 @@ const templates = [
 
 const faqs = [
   {
-    question: "Are the resumes ATS-friendly?",
+    question: "Are the CVs ATS-friendly?",
     answer:
-      "Yes. Our resume templates are designed with ATS-friendly structure, readable formatting, and standard resume sections to help applicant tracking systems understand your CV.",
+      "Yes. Our CV templates are designed with ATS-friendly structure, readable formatting, and standard CV sections to help applicant tracking systems understand your CV.",
   },
   {
-    question: "Can I edit my resume after creating it?",
+    question: "Can I edit my CV after creating it?",
     answer:
       "Yes. You can edit your personal information, education, experience, skills, projects, and other sections whenever you want.",
   },
   {
-    question: "Can I download my resume as a PDF?",
+    question: "Can I download my CV as a PDF?",
     answer:
-      "Yes. Once your resume is complete, you can download it as a professional PDF depending on the plan or template you've selected.",
+      "Yes. Downloads are free for now. Once payments go live, PDF download is part of the Pro plan (৳99, one-time).",
   },
   {
     question: "Can I pay using bKash or Nagad?",
     answer:
-      "Yes. CVBuilder is designed for users in Bangladesh and will support local payment methods such as bKash and Nagad alongside card payments.",
+      "Soon. bKash, Nagad and card payments are launching shortly. While payments are being set up, you can download your CV as a PDF for free.",
   },
   {
-    question: "Can I create more than one resume?",
+    question: "Can I create more than one CV?",
     answer:
-      "Yes. Depending on your plan, you can create and manage multiple resume versions for different jobs and career opportunities.",
+      "Yes. Depending on your plan, you can create and manage multiple CV versions for different jobs and career opportunities.",
   },
   {
     question: "Do I need a credit or debit card?",
     answer:
-      "No. You will be able to use supported local payment methods such as bKash and Nagad, as well as credit or debit cards.",
+      "No. Once payments go live you can pay with bKash or Nagad, so a card is optional.",
   },
 ];
 
@@ -398,53 +398,12 @@ export default function Home() {
           }}
         />
 
-        <div className="relative mx-auto max-w-7xl px-6 pb-20 pt-12 lg:px-8 lg:pb-28 lg:pt-16">
+        <div className="relative mx-auto max-w-7xl px-6 pb-16 pt-4 lg:px-8 lg:pb-20">
 
-          <div className="hero-in hero-delay-1 flex justify-center">
-            <div className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-sm font-medium text-sky-700">
-              <span className="animate-pulse">✦</span>
-              Build a better resume with AI
-            </div>
-          </div>
+          <HeroScene />
 
-          <div className="mt-8 lg:mt-10">
-            <HeroScene />
-          </div>
-
-          <div className="mx-auto mt-10 max-w-2xl text-center lg:mt-14">
-            <h1 className="hero-in hero-delay-3 text-3xl font-bold leading-[1.15] tracking-tight text-[#19324a] sm:text-4xl lg:text-5xl">
-              Your future looks better
-              <span className="block bg-gradient-to-r from-sky-500 via-emerald-400 to-cyan-500 bg-clip-text text-transparent">
-                with a great resume.
-              </span>
-            </h1>
-
-            <p className="hero-in hero-delay-4 mx-auto mt-6 max-w-xl text-base leading-8 text-slate-600 sm:text-lg">
-              Create a professional, modern, ATS-friendly resume in minutes.
-              Pick a template, add your information, and let our smart tools
-              help you say it well.
-            </p>
-
-            <div className="hero-in hero-delay-5 mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <a
-                href="/builder"
-                className="group sheen w-full rounded-xl bg-amber-300 px-8 py-4 text-center font-bold text-[#19324a] shadow-lg shadow-cyan-400/15 transition hover:-translate-y-0.5 hover:bg-amber-200 hover:shadow-xl hover:shadow-cyan-400/20 sm:w-auto"
-              >
-                Build your resume{" "}
-                <span className="inline-block transition-transform group-hover:translate-x-1">
-                  →
-                </span>
-              </a>
-
-              <a
-                href="#templates"
-                className="w-full rounded-xl border border-sky-200 bg-white px-8 py-4 text-center font-semibold text-[#19324a] shadow-sm transition hover:-translate-y-0.5 hover:border-cyan-300 hover:bg-sky-50 sm:w-auto"
-              >
-                Explore Templates
-              </a>
-            </div>
-
-            <div className="hero-in hero-delay-5 mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-slate-400">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="hero-in hero-delay-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-slate-400">
               <span>✓ ATS-friendly</span>
               <span>✓ Easy to edit</span>
               <span>✓ Professional templates</span>
@@ -459,19 +418,10 @@ export default function Home() {
 
           <div className="px-4 text-center">
             <p className="text-3xl font-bold text-[#19324a] sm:text-4xl">
-              <CountUp value={10} suffix="K+" />
+              <CountUp value={4} />
             </p>
             <p className="mt-2 text-sm text-slate-500">
-              Resumes Created
-            </p>
-          </div>
-
-          <div className="px-4 text-center">
-            <p className="text-3xl font-bold text-[#19324a] sm:text-4xl">
-              <CountUp value={95} suffix="%" />
-            </p>
-            <p className="mt-2 text-sm text-slate-500">
-              ATS Friendly
+              CV Templates
             </p>
           </div>
 
@@ -486,10 +436,19 @@ export default function Home() {
 
           <div className="px-4 text-center">
             <p className="text-3xl font-bold text-[#19324a] sm:text-4xl">
-              <CountUp value={5} suffix=" Min" />
+              ৳0
             </p>
             <p className="mt-2 text-sm text-slate-500">
-              Average Build Time
+              To Start Building
+            </p>
+          </div>
+
+          <div className="px-4 text-center">
+            <p className="text-3xl font-bold text-[#19324a] sm:text-4xl">
+              <CountUp value={1} suffix=" Click" />
+            </p>
+            <p className="mt-2 text-sm text-slate-500">
+              PDF Download
             </p>
           </div>
         </div>
@@ -509,11 +468,11 @@ export default function Home() {
               </p>
 
               <h2 className="mt-3 text-4xl font-bold tracking-tight text-[#19324a] sm:text-5xl">
-                Everything you need to build a better resume
+                Everything you need to build a better CV
               </h2>
 
               <p className="mt-5 text-lg leading-8 text-slate-600">
-                Simple tools that help you create a professional resume
+                Simple tools that help you create a professional CV
                 without spending hours formatting it.
               </p>
             </div>
@@ -556,7 +515,7 @@ export default function Home() {
               </p>
 
               <h2 className="mt-3 text-4xl font-bold tracking-tight text-[#19324a] sm:text-5xl">
-                Your resume. Three simple steps.
+                Your CV. Three simple steps.
               </h2>
             </div>
           </Reveal>
@@ -601,7 +560,7 @@ export default function Home() {
           <Reveal>
             <div className="text-center">
               <p className="font-semibold uppercase tracking-wider text-cyan-300">
-                Resume Templates
+                CV Templates
               </p>
 
               <h2 className="mt-3 text-4xl font-bold text-white sm:text-5xl">
@@ -610,7 +569,7 @@ export default function Home() {
 
               <p className="mx-auto mt-5 max-w-2xl text-lg text-sky-100/70">
                 Four real templates, ready in the builder. Pick one and switch
-                any time — your content stays.
+                any time and your content stays.
               </p>
             </div>
           </Reveal>
@@ -665,8 +624,8 @@ export default function Home() {
               </h2>
 
               <p className="mt-5 text-base leading-7 text-slate-600">
-                Create and edit your resume for free. Upgrade only when you
-                need premium templates and downloadable files.
+                Create and edit your CV for free. Pro and Premium unlock premium
+                templates, AI suggestions and PDF downloads.
               </p>
             </div>
           </Reveal>
@@ -696,15 +655,15 @@ export default function Home() {
                 </p>
 
                 <ul className="mt-8 space-y-4 text-sm text-slate-600">
-                  <li>✓ Create your resume</li>
+                  <li>✓ Create your CV</li>
                   <li>✓ Basic ATS-friendly templates</li>
                   <li>✓ Edit your information</li>
-                  <li>✓ Live resume preview</li>
+                  <li>✓ Live CV preview</li>
                   <li>✓ Basic CV customization</li>
                 </ul>
 
                 <a
-                  href="#builder"
+                  href="/signup?plan=free"
                   className="mt-8 block rounded-xl border border-sky-200 px-5 py-3 text-center font-semibold text-[#19324a] transition hover:border-cyan-300 hover:bg-sky-50"
                 >
                   Start for Free
@@ -735,13 +694,13 @@ export default function Home() {
                 <ul className="mt-8 space-y-4 text-sm text-slate-600">
                   <li>✓ Everything in Free</li>
                   <li>✓ Premium ATS templates</li>
-                  <li>✓ AI resume suggestions</li>
+                  <li>✓ AI CV suggestions</li>
                   <li>✓ Download CV as PDF</li>
-                  <li>✓ Multiple resume versions</li>
+                  <li>✓ Multiple CV versions</li>
                 </ul>
 
                 <a
-                  href="#builder"
+                  href="/signup?plan=pro"
                   className="sheen mt-8 block rounded-xl bg-[#19324a] px-5 py-3 text-center font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#234967]"
                 >
                   Choose Pro
@@ -749,7 +708,7 @@ export default function Home() {
 
                 <div className="mt-6 border-t border-sky-100 pt-5 text-center">
                   <p className="text-xs font-medium text-slate-400">
-                    Pay securely with
+                    Coming soon: pay with
                   </p>
 
                   <div className="mt-3 flex justify-center gap-2">
@@ -795,12 +754,12 @@ export default function Home() {
                   <li>✓ Everything in Pro</li>
                   <li>✓ All premium templates</li>
                   <li>✓ Advanced AI suggestions</li>
-                  <li>✓ Unlimited resume versions</li>
+                  <li>✓ Unlimited CV versions</li>
                   <li>✓ Priority support</li>
                 </ul>
 
                 <a
-                  href="#builder"
+                  href="/signup?plan=premium"
                   className="mt-8 block rounded-xl border border-sky-200 px-5 py-3 text-center font-semibold text-[#19324a] transition hover:border-cyan-300 hover:bg-sky-50"
                 >
                   Choose Premium
@@ -808,7 +767,7 @@ export default function Home() {
 
                 <div className="mt-6 border-t border-sky-100 pt-5 text-center">
                   <p className="text-xs font-medium text-slate-400">
-                    Pay securely with
+                    Coming soon: pay with
                   </p>
 
                   <div className="mt-3 flex justify-center gap-2">
@@ -830,7 +789,8 @@ export default function Home() {
           </div>
 
           <p className="mt-8 text-center text-sm text-slate-400">
-            No subscription required. Pay once and download your resume.
+            No subscription required. bKash, Nagad and card payments are
+            launching soon. Until then, PDF downloads are free.
           </p>
         </div>
       </section>
@@ -892,11 +852,11 @@ export default function Home() {
 
             <div className="relative">
               <h2 className="text-4xl font-black tracking-tight text-white sm:text-5xl">
-                Ready to build your resume?
+                Ready to build your CV?
               </h2>
 
               <p className="mx-auto mt-5 max-w-2xl text-lg text-sky-100/75">
-                Create a professional, job-ready resume in minutes — without
+                Create a professional, job-ready CV in minutes, without
                 fighting with complicated formatting.
               </p>
 
@@ -904,7 +864,7 @@ export default function Home() {
                 href="/builder"
                 className="group sheen mt-8 inline-block rounded-xl bg-amber-300 px-8 py-4 font-bold text-[#19324a] shadow-lg shadow-amber-300/20 transition hover:-translate-y-0.5 hover:bg-amber-200 hover:shadow-xl hover:shadow-amber-300/30"
               >
-                Start Building My Resume{" "}
+                Start Building My CV{" "}
                 <span className="inline-block transition-transform group-hover:translate-x-1">
                   →
                 </span>
@@ -925,7 +885,7 @@ export default function Home() {
             </div>
 
             <p className="mt-3 max-w-sm text-sm leading-6 text-sky-100/60">
-              Build professional resumes faster with AI-powered tools and
+              Build professional CVs faster with AI-powered tools and
               modern templates.
             </p>
           </div>

@@ -26,7 +26,7 @@ export default function HeroScene() {
             {/* Small badge */}
             <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-50 to-emerald-50 px-5 py-2.5 text-sm font-medium text-[#19324a]">
               <span className="text-amber-400">✦</span>
-              <span>Build your professional CV</span>
+              <span>AI-powered CV builder for Bangladesh</span>
             </div>
 
             {/* Main heading */}
@@ -59,7 +59,7 @@ export default function HeroScene() {
               </a>
 
               <a
-                href="/templates"
+                href="#templates"
                 className="inline-flex items-center rounded-full border border-slate-200 bg-white px-8 py-4 text-base font-semibold text-[#19324a] transition hover:border-sky-200 hover:bg-sky-50"
               >
                 View Templates
@@ -106,9 +106,9 @@ export default function HeroScene() {
                 title="Download Anytime"
                 description={
                   <>
-                    Get your CV in PDF
+                    Free to build.
                     <br />
-                    instantly.
+                    One-click PDF.
                   </>
                 }
               />
@@ -194,11 +194,12 @@ export default function HeroScene() {
 
                 {/* Profile image */}
                 <div className="h-20 w-20 shrink-0 overflow-hidden rounded-full bg-sky-100">
-                  <img
-                    src="/profile.jpg"
-                    alt="Profile"
-                    className="h-full w-full object-cover"
-                  />
+                  <div
+                    aria-hidden="true"
+                    className="flex h-full w-full items-center justify-center bg-gradient-to-br from-sky-300 to-emerald-300 text-2xl font-bold text-white"
+                  >
+                    SK
+                  </div>
                 </div>
 
                 <div className="min-w-0 flex-1">
@@ -253,7 +254,7 @@ export default function HeroScene() {
                       </p>
 
                       <p className="mt-0.5 text-[9px] text-slate-400">
-                        Comapny Name ....
+                        Nexora Digital Ltd, Dhaka
                       </p>
                     </div>
 
@@ -263,9 +264,9 @@ export default function HeroScene() {
                   </div>
 
                   <div className="mt-2 space-y-1 text-[8px] leading-4 text-slate-500">
-                    <p>• Worked on documentation and communication tasks</p>
-                    <p>• Supported network division operations</p>
-                    <p>• Assisted in management approval processes</p>
+                    <p>• Built 12 reusable React components, cutting new page build time by 30%</p>
+                    <p>• Improved Lighthouse performance score from 62 to 91 on the client portal</p>
+                    <p>• Shipped responsive UI for 3 client projects using Next.js and Tailwind</p>
                   </div>
                 </div>
 

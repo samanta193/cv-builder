@@ -1300,7 +1300,7 @@ const buildResumeText = () => {
 
             <div className="flex items-center justify-between">
               <h2 className="text-2xl font-bold text-slate-950">
-                Download Your Resume
+                Download Your CV
               </h2>
 
               <button
@@ -1313,17 +1313,20 @@ const buildResumeText = () => {
             </div>
 
             <p className="mt-2 text-sm text-slate-500">
-              Choose your preferred payment method to download your resume.
+              Online payments are launching soon. Until then, PDF downloads are free.
             </p>
 
             <div className="mt-6 rounded-xl bg-slate-50 p-4">
               <div className="flex items-center justify-between">
                 <span className="font-semibold text-slate-700">
-                  Resume PDF
+                  CV PDF
                 </span>
 
                 <span className="font-bold text-slate-950">
-                  ৳100
+                  <span className="mr-2 text-sm font-medium text-slate-400 line-through">
+                    ৳99
+                  </span>
+                  Free
                 </span>
               </div>
             </div>
@@ -1332,23 +1335,29 @@ const buildResumeText = () => {
 
               <button
                 type="button"
-                className="w-full rounded-xl border border-slate-200 px-4 py-3 text-left font-semibold hover:border-cyan-400 hover:bg-cyan-50"
+                disabled
+                className="flex w-full cursor-not-allowed items-center justify-between rounded-xl border border-slate-200 px-4 py-3 text-left font-semibold text-slate-400"
               >
                 bKash
+                <span className="text-xs font-medium">Coming soon</span>
               </button>
 
               <button
                 type="button"
-                className="w-full rounded-xl border border-slate-200 px-4 py-3 text-left font-semibold hover:border-cyan-400 hover:bg-cyan-50"
+                disabled
+                className="flex w-full cursor-not-allowed items-center justify-between rounded-xl border border-slate-200 px-4 py-3 text-left font-semibold text-slate-400"
               >
                 Nagad
+                <span className="text-xs font-medium">Coming soon</span>
               </button>
 
               <button
                 type="button"
-                className="w-full rounded-xl border border-slate-200 px-4 py-3 text-left font-semibold hover:border-cyan-400 hover:bg-cyan-50"
+                disabled
+                className="flex w-full cursor-not-allowed items-center justify-between rounded-xl border border-slate-200 px-4 py-3 text-left font-semibold text-slate-400"
               >
                 Credit / Debit Card
+                <span className="text-xs font-medium">Coming soon</span>
               </button>
 
             </div>
@@ -1361,11 +1370,11 @@ const buildResumeText = () => {
               }}
               className="mt-6 w-full rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 hover:bg-cyan-300"
             >
-              Pay ৳100 & Download
+              Download PDF for free
             </button>
 
             <p className="mt-4 text-center text-xs text-slate-400">
-              Secure payment • Instant PDF download
+              bKash, Nagad and card payments coming soon
             </p>
 
           </div>

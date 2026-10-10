@@ -74,7 +74,7 @@ export default function SignUpPage() {
             </h1>
 
             <p className="mt-2 text-sm text-slate-500">
-              Sign up to start building your professional resume.
+              Sign up to start building your professional CV.
             </p>
           </div>
 
@@ -120,8 +120,13 @@ export default function SignUpPage() {
                 onChange={(event) => setPassword(event.target.value)}
                 placeholder="Create a password"
                 required
+                minLength={6}
                 className="mt-2 w-full rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-100"
               />
+
+              <p className="mt-1.5 text-xs text-slate-400">
+                At least 6 characters.
+              </p>
             </div>
 
             <div>

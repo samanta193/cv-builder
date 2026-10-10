@@ -13,12 +13,40 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [message, setMessage] = useState("");
+  const [resetting, setResetting] = useState(false);
+
+  async function handleForgotPassword() {
+    setError("");
+    setMessage("");
+
+    if (!email) {
+      setError("Enter your email above first, then click Forgot password.");
+      return;
+    }
+
+    setResetting(true);
+
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+      redirectTo: `${window.location.origin}/reset-password`,
+    });
+
+    setResetting(false);
+
+    if (error) {
+      setError(error.message);
+      return;
+    }
+
+    setMessage("Check your inbox for a link to reset your password.");
+  }
 
   async function handleLogin(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     setLoading(true);
     setError("");
+    setMessage("");
 
     const { error } = await supabase.auth.signInWithPassword({
       email,
@@ -52,7 +80,7 @@ export default function LoginPage() {
             </h1>
 
             <p className="mt-2 text-sm text-slate-500">
-              Log in to continue building your professional resume.
+              Log in to continue building your professional CV.
             </p>
           </div>
 
@@ -73,9 +101,20 @@ export default function LoginPage() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-slate-700">
-                Password
-              </label>
+              <div className="flex items-center justify-between">
+                <label className="block text-sm font-semibold text-slate-700">
+                  Password
+                </label>
+
+                <button
+                  type="button"
+                  onClick={handleForgotPassword}
+                  disabled={resetting}
+                  className="text-sm font-medium text-cyan-600 hover:text-cyan-700 disabled:opacity-60"
+                >
+                  {resetting ? "Sending..." : "Forgot password?"}
+                </button>
+              </div>
 
               <input
                 type="password"
@@ -93,6 +132,12 @@ export default function LoginPage() {
               </p>
             )}
 
+            {message && (
+              <p className="rounded-xl bg-green-50 px-4 py-3 text-sm text-green-600">
+                {message}
+              </p>
+            )}
+
             <button
               type="submit"
               disabled={loading}
@@ -103,7 +148,7 @@ export default function LoginPage() {
           </form>
 
           <p className="mt-6 text-center text-sm text-slate-500">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link
               href="/signup"
               className="font-semibold text-cyan-600 hover:text-cyan-700"
